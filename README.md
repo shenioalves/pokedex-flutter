@@ -59,6 +59,7 @@ lib/
     │   └── splash/       # Tela de Abertura
     ├── model/            # Modelos de dados globais e Mappers
     └── theme/            # Design System (Cores e Estilos)
+```
 
 ## 🛠️ Tecnologias e Bibliotecas
 
