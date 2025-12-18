@@ -1,6 +1,6 @@
 import 'package:go_router/go_router.dart';
 import 'package:pokedex/app/features/favorites/favorites_view.dart';
-import 'package:pokedex/app/features/pokedex/view/home/pokedex_view.dart';
+import 'package:pokedex/app/features/home/pokedex_view.dart';
 import 'package:pokedex/app/features/pokedex/view/details/pokemon_details_view.dart';
 import 'package:pokedex/app/features/splash/splash_view.dart';
 

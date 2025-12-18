@@ -30,6 +30,7 @@ class _PokedexSearchBarWidgetState extends State<PokedexSearchBarWidget> {
         onChanged: widget.onChanged,
         style: const TextStyle(color: Colors.black),
         decoration: InputDecoration(
+      
           hintText: 'Buscar Pokémon...',
           hintStyle: const TextStyle(color: Colors.grey),
           border: InputBorder.none,

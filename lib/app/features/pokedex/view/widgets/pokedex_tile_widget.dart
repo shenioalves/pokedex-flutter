@@ -65,7 +65,7 @@ class PokedexTileWidget extends StatelessWidget {
           pokemon.name.toUpperCase(),
           style: const TextStyle(fontWeight: FontWeight.bold),
         ),
-        subtitle: Text('#${pokemon.id}'),
+        //subtitle: Text('#${pokemon.id}'),
         trailing: const Icon(
           Icons.arrow_forward_ios,
           size: 16,

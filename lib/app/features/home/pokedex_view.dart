@@ -3,8 +3,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get_it/get_it.dart';
 import 'package:pokedex/app/features/pokedex/view/pokedex_scaffold/_pokedex_scaffold.dart';
 
-import '../../bloc/pokemon_bloc.dart';
-import '../../bloc/pokemon_event.dart';
+import '../pokedex/bloc/pokemon_bloc.dart';
+import '../pokedex/bloc/pokemon_event.dart';
 
 class PokedexView extends StatelessWidget {
   const PokedexView({super.key});

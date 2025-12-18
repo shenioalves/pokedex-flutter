@@ -3,8 +3,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get_it/get_it.dart';
 import 'package:go_router/go_router.dart';
 import 'package:pokedex/app/features/favorites/favorite_cubit.dart';
+import 'package:pokedex/app/features/favorites/favorite_tile_widget.dart';
 import 'package:pokedex/app/features/favorites/favorites_list_cubit.dart';
-import 'package:pokedex/app/features/pokedex/view/widgets/pokedex_tile_widget.dart';
 
 class FavoritesView extends StatelessWidget {
   const FavoritesView({super.key});
@@ -75,17 +75,14 @@ class FavoritesView extends StatelessWidget {
                   padding: const EdgeInsets.all(16),
                   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 2,
-                    crossAxisSpacing: 10,
-                    mainAxisSpacing: 10,
-                    childAspectRatio: 1.4,
+                    crossAxisSpacing: 12,
+                    mainAxisSpacing: 12,
+                    childAspectRatio: 0.85,
                   ),
                   itemCount: state.pokemons.length,
                   itemBuilder: (context, index) {
                     final pokemon = state.pokemons[index];
-                    return PokedexTileWidget(
-                      pokemon: pokemon,
-                      currentFilterType: null,
-                    );
+                    return FavoriteTileWidget(pokemon: pokemon);
                   },
                 );
               }

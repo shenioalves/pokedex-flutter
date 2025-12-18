@@ -13,10 +13,17 @@ O projeto demonstra o uso avançado de gerenciamento de estado, injeção de dep
 
 ## 📱 Screenshots
 
-| Home (Lista) | Filtros Dinâmicos | Detalhes | Favoritos |
+| Home (Lista) | Detalhes | Favoritos |
+
 |:---:|:---:|:---:|:---:|
+
 | | | | |
-| ![Home](https://via.placeholder.com/150?text=Home) | ![Filter](https://via.placeholder.com/150?text=Filtros) | ![Details](https://via.placeholder.com/150?text=Detalhes) | ![Favs](https://via.placeholder.com/150?text=Favoritos) |
+
+| ![Home](assets/home.png) | ![Details](assets/details.png) | ![Favs](assets/favorite.png) |
+
+
+
+
 
 ---
 
@@ -59,50 +66,50 @@ lib/
     │   └── splash/       # Tela de Abertura
     ├── model/            # Modelos de dados globais e Mappers
     └── theme/            # Design System (Cores e Estilos)
-
+```
+---
 ## 🛠️ Tecnologias e Bibliotecas
 
-    flutter_bloc: Gerenciamento de estado robusto (Padrão BLoC e Cubit).
+- **flutter_bloc**: Gerenciamento de estado robusto (Padrão BLoC e Cubit).
 
-    dio: Cliente HTTP potente para requisições API.
+- **dio**: Cliente HTTP potente para requisições API.
 
-    get_it: Injeção de Dependência (Service Locator).
+- **get_it**: Injeção de Dependência (Service Locator).
 
-    go_router: Navegação declarativa baseada em rotas e URLs.
+- **go_router**: Navegação declarativa baseada em rotas e URLs.
 
-    shared_preferences: Persistência de dados local (Favoritos).
+- **shared_preferences**: Persistência de dados local (Favoritos).
 
-    cached_network_image: Cache inteligente de imagens.
+- **cached_network_image**: Cache inteligente de imagens.
 
-    equatable: Comparação de objetos para otimizar rebuilds.
+- **equatable**: Comparação de objetos para otimizar rebuilds.
+---
 
-##⚡ Como rodar o projeto
+## ⚡ Como rodar o projeto
 
-    Clone o repositório
-
+Clone o repositório
 ```bash
-git clone [https://github.com/seu-usuario/pokedex-flutter.git](https://github.com/seu-usuario/pokedex-flutter.git)
-cd pokedex-flutter
-
-Instale as dependências
+    git clone https://github.com/shenioalves/pokedex-flutter.git
+    cd pokedex-flutter
+```
+### Instale as dependências
 ```bash
-
 flutter pub get
-
-Execute o aplicativo
+```
+### Execute o aplicativo
 ```bash
+flutter run
+```
+---
+## 🚧 Roadmap (Próximos Passos)
 
-    flutter run
+- [ ] Implementar Testes Unitários e de Widget (Bloc Test).
 
-🚧 Roadmap (Próximos Passos)
+- [ ] Adicionar suporte a Dark Mode.
 
-    [ ] Implementar Testes Unitários e de Widget (Bloc Test).
+- [ ] Criar gráfico de estatísticas (Radar Chart) na tela de detalhes.
 
-    [ ] Adicionar suporte a Dark Mode.
-
-    [ ] Criar gráfico de estatísticas (Radar Chart) na tela de detalhes.
-
-    [ ] Adicionar filtros avançados (Peso, Altura).
+- [ ] Adicionar filtros avançados (Peso, Altura).
 
 ## 👨‍💻 Autor
 
