@@ -1,5 +1,5 @@
 name: pokedex
-description: "A new Flutter project."
+description: ""
 publish_to: 'none' 
 
 version: 1.0.0+1
@@ -11,12 +11,15 @@ dependencies:
     sdk: flutter
   bloc: ^9.1.0
   flutter_bloc: ^9.1.1
+  bloc_concurrency: ^0.3.0
   equatable: ^2.0.7
   dio: ^5.9.0
   get_it: ^9.2.0 
   go_router: ^17.0.1
   cached_network_image: ^3.4.1
-  cupertino_icons: ^1.0.8
+  shared_preferences: ^2.5.4
+  stream_transform: ^2.1.1
+  cupertino: ^0.0.1
 
 
 dev_dependencies:

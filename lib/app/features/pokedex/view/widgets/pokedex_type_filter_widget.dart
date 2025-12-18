@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 
-class PokemonTypeFilterWidget extends StatelessWidget {
-  // Lista fixa de tipos para exemplo
+class PokedexTypeFilterWidget extends StatelessWidget {
   final List<String> types = const [
     'Fire', 'Water', 'Grass', 'Electric', 'Psychic', 
-    'Ice', 'Dragon', 'Dark', 'Fairy', 'Normal', 'Fighting'
+    'Ice', 'Dragon', 'Dark', 'Fairy', 'Normal', 'Fighting', 
+    'Poison', 'Ground', 'Flying', 'Bug', 'Rock', 'Ghost', 'Steel'
   ];
 
   final String? selectedType;
   final ValueChanged<String> onTypeSelected;
 
-  const PokemonTypeFilterWidget({
+  const PokedexTypeFilterWidget({
     super.key,
     required this.selectedType,
     required this.onTypeSelected,
@@ -27,20 +27,19 @@ class PokemonTypeFilterWidget extends StatelessWidget {
         separatorBuilder: (_, __) => const SizedBox(width: 10),
         itemBuilder: (context, index) {
           final type = types[index];
-          final isSelected = selectedType == type;
+          final isSelected = selectedType?.toLowerCase() == type.toLowerCase();
 
           return GestureDetector(
-            onTap: () => onTypeSelected(type),
+            onTap: () => onTypeSelected(type.toLowerCase()),
             child: AnimatedContainer(
               duration: const Duration(milliseconds: 300),
               padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
               decoration: BoxDecoration(
-                // Se selecionado, fica branco, senão fica transparente com borda
                 color: isSelected ? Colors.white : Colors.white.withOpacity(0.2),
                 borderRadius: BorderRadius.circular(20),
-                border: isSelected 
-                  ? null 
-                  : Border.all(color: Colors.white.withOpacity(0.5)),
+                border: isSelected
+                    ? null
+                    : Border.all(color: Colors.white.withOpacity(0.5)),
               ),
               child: Center(
                 child: Text(

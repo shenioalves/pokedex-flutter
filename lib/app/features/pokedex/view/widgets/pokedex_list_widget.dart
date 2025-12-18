@@ -1,13 +1,16 @@
-// lib/app/features/pokedex/view/widgets/pokemon_list.dart
 import 'package:flutter/material.dart';
 import 'package:pokedex/app/model/pokemon_model.dart';
-
 import 'pokedex_tile_widget.dart';
 
-class PokemonListWidget extends StatelessWidget {
+class PokedexListWidget extends StatelessWidget {
   final List<PokemonModel> pokemons;
+  final String? currentFilterType;
 
-  const PokemonListWidget({super.key, required this.pokemons});
+  const PokedexListWidget({
+    super.key,
+    required this.pokemons,
+    this.currentFilterType,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -17,8 +20,10 @@ class PokemonListWidget extends StatelessWidget {
       separatorBuilder: (_, _) => const SizedBox(height: 10),
       itemBuilder: (context, index) {
         final pokemon = pokemons[index];
-        return PokemonTileWidget(pokemon: pokemon, currentFilterType: '',);
-
+        return PokedexTileWidget(
+          pokemon: pokemon,
+          currentFilterType: currentFilterType,
+        );
       },
     );
   }

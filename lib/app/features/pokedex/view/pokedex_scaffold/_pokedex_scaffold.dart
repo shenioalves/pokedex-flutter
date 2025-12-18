@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:pokedex/app/features/pokedex/view/pokedex_scaffold/pokedex_header_section.dart';
-import 'package:pokedex/app/features/pokedex/view/pokedex_scaffold/pokedex_list_secsion.dart';
+import 'package:pokedex/app/features/pokedex/view/pokedex_scaffold/pokedex_list_section.dart';
+
+import 'pokedex_header_section.dart';
 
 class PokedexScaffold extends StatelessWidget {
   const PokedexScaffold({super.key});

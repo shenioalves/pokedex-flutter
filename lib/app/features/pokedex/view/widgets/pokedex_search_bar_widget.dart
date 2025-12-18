@@ -1,9 +1,21 @@
 import 'package:flutter/material.dart';
 
-class PokemonSearchBarWidget extends StatelessWidget {
+class PokedexSearchBarWidget extends StatefulWidget {
   final ValueChanged<String> onChanged;
 
-  const PokemonSearchBarWidget({super.key, required this.onChanged});
+  const PokedexSearchBarWidget({super.key, required this.onChanged});
+
+  @override
+  State<PokedexSearchBarWidget> createState() => _PokedexSearchBarWidgetState();
+}
+
+class _PokedexSearchBarWidgetState extends State<PokedexSearchBarWidget> {
+  final TextEditingController _controller = TextEditingController();
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -14,13 +26,22 @@ class PokemonSearchBarWidget extends StatelessWidget {
         borderRadius: BorderRadius.circular(12),
       ),
       child: TextField(
-        onChanged: onChanged,
+        controller: _controller,
+        onChanged: widget.onChanged,
         style: const TextStyle(color: Colors.black),
-        decoration: const InputDecoration(
+        decoration: InputDecoration(
           hintText: 'Buscar Pokémon...',
-          hintStyle: TextStyle(color: Colors.grey),
+          hintStyle: const TextStyle(color: Colors.grey),
           border: InputBorder.none,
-          icon: Icon(Icons.search, color: Colors.grey),
+          prefixIcon: const Icon(Icons.search),
+          suffixIcon: IconButton(
+            icon: const Icon(Icons.close),
+            onPressed: () {
+              _controller.clear();
+              widget.onChanged('');
+              FocusScope.of(context).unfocus();
+            },
+          ),
         ),
       ),
     );

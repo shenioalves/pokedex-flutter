@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 
 class AppColors {
-  // Cor padrão (Pokedex Red)
   static const Color primary = Color(0xFFEA5D60);
-  
-  // Mapa de cores por tipo
+
   static final Map<String, Color> _typeColors = {
     'fire': const Color(0xFFFA6555),
     'water': const Color(0xFF58ABF6),
@@ -26,11 +24,11 @@ class AppColors {
     'normal': const Color(0xFFA8A77A),
   };
 
-  // Método que recebe a String (ex: "fire") e devolve a Cor
   static Color getColorByType(String? type) {
-    if (type == null) return primary;
-    
-    // Normaliza para lowercase para garantir o match
-    return _typeColors[type.toLowerCase()] ?? primary;
+    if (type == null || type.isEmpty) return primary;
+
+    final key = type.toLowerCase();
+
+    return _typeColors[key] ?? primary;
   }
 }
