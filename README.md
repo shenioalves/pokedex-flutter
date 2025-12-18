@@ -60,7 +60,7 @@ lib/
     ├── model/            # Modelos de dados globais e Mappers
     └── theme/            # Design System (Cores e Estilos)
 ```
-
+---
 ## 🛠️ Tecnologias e Bibliotecas
 
     flutter_bloc: Gerenciamento de estado robusto (Padrão BLoC e Cubit).
@@ -76,7 +76,8 @@ lib/
     cached_network_image: Cache inteligente de imagens.
 
     equatable: Comparação de objetos para otimizar rebuilds.
-
+---
+---
 ##⚡ Como rodar o projeto
 
 Clone o repositório
@@ -92,6 +93,7 @@ flutter pub get
 ```bash
 flutter run
 ```
+---
 ## 🚧 Roadmap (Próximos Passos)
 
     - [ ] Implementar Testes Unitários e de Widget (Bloc Test).
