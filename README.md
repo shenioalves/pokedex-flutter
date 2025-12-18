@@ -63,19 +63,19 @@ lib/
 ---
 ## 🛠️ Tecnologias e Bibliotecas
 
-    flutter_bloc: Gerenciamento de estado robusto (Padrão BLoC e Cubit).
+- **flutter_bloc**: Gerenciamento de estado robusto (Padrão BLoC e Cubit).
 
-    dio: Cliente HTTP potente para requisições API.
+- **dio**: Cliente HTTP potente para requisições API.
 
-    get_it: Injeção de Dependência (Service Locator).
+- **get_it**: Injeção de Dependência (Service Locator).
 
-    go_router: Navegação declarativa baseada em rotas e URLs.
+- **go_router**: Navegação declarativa baseada em rotas e URLs.
 
-    shared_preferences: Persistência de dados local (Favoritos).
+- **shared_preferences**: Persistência de dados local (Favoritos).
 
-    cached_network_image: Cache inteligente de imagens.
+- **cached_network_image**: Cache inteligente de imagens.
 
-    equatable: Comparação de objetos para otimizar rebuilds.
+- **equatable**: Comparação de objetos para otimizar rebuilds.
 ---
 ---
 ##⚡ Como rodar o projeto
